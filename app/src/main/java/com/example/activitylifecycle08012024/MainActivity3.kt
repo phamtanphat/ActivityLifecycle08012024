@@ -26,7 +26,7 @@ class MainActivity3 : AppCompatActivity() {
 
         btnNavigateMain3 = findViewById(R.id.button_navigate_main3)
         btnNavigateMain3.setOnClickListener {
-            val intent = Intent(this, MainActivity3::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
