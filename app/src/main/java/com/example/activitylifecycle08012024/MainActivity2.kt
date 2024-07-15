@@ -9,56 +9,55 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
-    private lateinit var btnNavigateMain2: Button
+    private lateinit var btnNavigateMain3: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        btnNavigateMain2 = findViewById(R.id.button_navigate_main2)
-        btnNavigateMain2.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+        btnNavigateMain3 = findViewById(R.id.button_navigate_main3)
+        btnNavigateMain3.setOnClickListener {
+            val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
 
-        Log.d("pphat", "Main: onCreate")
+        Log.d("pphat", "Main2: onCreate")
     }
-
     override fun onStart() {
         super.onStart()
-        Log.d("pphat", "Main: onStart")
+        Log.d("pphat", "Main2: onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("pphat", "Main: onResume")
+        Log.d("pphat", "Main2: onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("pphat", "Main: onPause")
+        Log.d("pphat", "Main2: onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("pphat", "Main: onStop")
+        Log.d("pphat", "Main2: onStop")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.d("pphat", "Main: onRestart")
+        Log.d("pphat", "Main2: onRestart")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("pphat", "Main: onDestroy")
+        Log.d("pphat", "Main2: onDestroy")
     }
 }
