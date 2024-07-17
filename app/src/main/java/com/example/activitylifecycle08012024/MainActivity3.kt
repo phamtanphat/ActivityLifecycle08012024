@@ -23,10 +23,10 @@ class MainActivity3 : AppCompatActivity() {
             insets
         }
 
-
         btnNavigateMain3 = findViewById(R.id.button_navigate_main3)
         btnNavigateMain3.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity3::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
         }
 
